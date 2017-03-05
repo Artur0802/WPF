@@ -25,7 +25,7 @@ namespace LogParser
             InitializeComponent();
 
             //subscribe
-            foreach (UIElement guielement in mainLayout.Children)
+            foreach (UIElement guielement in mainPanel.Children)
             {
                 //is
                 if (guielement is Button)
@@ -43,10 +43,10 @@ namespace LogParser
         private void getBtnContent(object sender, RoutedEventArgs e)
         {
             String btnContent = ((Button)sender).Content.ToString();
-            this.txtOutput.Text = btnContent;
+            this.txtBox.Text = btnContent;
 
             String btnContent2 = ((Button)e.OriginalSource).Content.ToString();
-            this.txtOutput.Text += " " + btnContent2;
+            this.txtBox.Text += " " + btnContent2;
         }
     }
 }

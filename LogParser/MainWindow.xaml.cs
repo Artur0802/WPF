@@ -23,6 +23,30 @@ namespace LogParser
         public MainWindow()
         {
             InitializeComponent();
+
+            //subscribe
+            foreach (UIElement guielement in mainLayout.Children)
+            {
+                //is
+                if (guielement is Button)
+                {
+                    ((Button)guielement).Click += getBtnContent;
+                }
+            }
+        }
+
+        private void operationEqual(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(" = was pressed");
+        }
+
+        private void getBtnContent(object sender, RoutedEventArgs e)
+        {
+            String btnContent = ((Button)sender).Content.ToString();
+            this.txtOutput.Text = btnContent;
+
+            String btnContent2 = ((Button)e.OriginalSource).Content.ToString();
+            this.txtOutput.Text += " " + btnContent2;
         }
     }
 }

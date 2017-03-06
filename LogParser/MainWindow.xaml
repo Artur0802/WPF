@@ -23,6 +23,7 @@
             </Grid.ColumnDefinitions>
 
             <Grid x:Name="digitLayout" ShowGridLines="True" Grid.Column="1" Grid.Row="0">
+                
                 <Grid.RowDefinitions>
                     <RowDefinition/>
                     <RowDefinition/>
@@ -40,35 +41,99 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Button Content="0" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" />
-                <Button Content="," Grid.Row="5" Grid.Column="2" />
-                <Button Content="1" Grid.Row="4" Grid.Column="0" />
-                <Button Content="2" Grid.Row="4" Grid.Column="1" />
-                <Button Content="3" Grid.Row="4" Grid.Column="2" />
-                <Button Content="4" Grid.Row="3" Grid.Column="0" />
-                <Button Content="5" Grid.Row="3" Grid.Column="1" />
-                <Button Content="6" Grid.Row="3" Grid.Column="2" />
+                <Button Content="MC" Grid.Row="0" Grid.Column="0" />
+                <Button Content="MR" Grid.Row="0" Grid.Column="1" />
+                <Button Content="MS" Grid.Row="0" Grid.Column="2" />
+                <Button Content="M+" Grid.Row="0" Grid.Column="3" />
+                <Button Content="M-" Grid.Row="0" Grid.Column="4" />
+                <Button Content="←" Grid.Row="1" Grid.Column="0" />
+                <Button Content="CE" Grid.Row="1" Grid.Column="1" />
+                <Button Content="C" Grid.Row="1" Grid.Column="2" />
+                <Button Content="±" Grid.Row="1" Grid.Column="3" />
+                <Button Content="√" Grid.Row="1" Grid.Column="4" />
                 <Button Content="7" Grid.Row="2" Grid.Column="0" />
                 <Button Content="8" Grid.Row="2" Grid.Column="1" />
                 <Button Content="9" Grid.Row="2" Grid.Column="2" />
+                <Button Content="÷" Grid.Row="2" Grid.Column="3" />
+                <Button Content="%" Grid.Row="2" Grid.Column="4" />
+                <Button Content="4" Grid.Row="3" Grid.Column="0" />
+                <Button Content="5" Grid.Row="3" Grid.Column="1" />
+                <Button Content="6" Grid.Row="3" Grid.Column="2" />
+                <Button Content="×" Grid.Row="3" Grid.Column="3" />
+                <Button Content="1/x" Grid.Row="3" Grid.Column="4" />
+                <Button Content="1" Grid.Row="4" Grid.Column="0" />
+                <Button Content="2" Grid.Row="4" Grid.Column="1" />
+                <Button Content="3" Grid.Row="4" Grid.Column="2" />
+                <Button Content="-" Grid.Row="4" Grid.Column="3" />
                 <Button x:Name="btnEquals" Content="=" Grid.Row="4" Grid.Column="4" Grid.RowSpan="2" Click="operationEqual" />
+                <Button Content="0" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" />
+                <Button Content="," Grid.Row="5" Grid.Column="2" />
+                <Button Content="+" Grid.Row="5" Grid.Column="3" />
+                
             </Grid>
 
-            <Grid ShowGridLines="True" x:Name="engeneeringLayout" Grid.Column="0" Grid.Row="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
+            <Grid ShowGridLines="True" Grid.Column="0" Grid.Row="0">
+                
+                <DockPanel>
+
+                    <Grid ShowGridLines="True">
+                        
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="17*"/>
+                            <RowDefinition Height="83*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Grid ShowGridLines="True" x:Name="radiobtnLayout" Grid.Row="0" Grid.Column="0">
+                            
+                            <DockPanel>
+
+                                <Grid ShowGridLines="True">
+                                    
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="33*"/>
+                                        <ColumnDefinition Width="33*"/>
+                                        <ColumnDefinition Width="33*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <RadioButton Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Degrees"></RadioButton>
+                                    <RadioButton Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Radians"></RadioButton>
+                                    <RadioButton Grid.Row="0" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Grads"></RadioButton>
+
+                                </Grid>
+                                
+                            </DockPanel>
+                            
+                        </Grid>
+                        
+                        <Grid ShowGridLines="True" x:Name="engeneeringLayout" Grid.Row="1" Grid.Column="0">
+                            
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            
+                        </Grid>
+                        
+                    </Grid>
+                    
+                </DockPanel>
+                
             </Grid>
 
         </Grid>

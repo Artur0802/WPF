@@ -37,7 +37,9 @@
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Name="engineeringLayout" Width="100*"/>
+
+                    <ColumnDefinition Name="engineeringLayout" Width="0*"/>
+
                     <ColumnDefinition Name="simpleLayout" Width="100*"/>
                 </Grid.ColumnDefinitions>
 

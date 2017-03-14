@@ -41,7 +41,7 @@ namespace LogParser
             }
             else
             {
-                MessageBox.Show("File didn't choose");
+                MessageBox.Show("File was not selected");
             }
         }
 
@@ -50,8 +50,6 @@ namespace LogParser
             List<Tag> tags = new List<LogParser.Tag>();
             tags.Add(new Tag("Exitcode:"));
             tags.Add(new Tag("Errormessages"));
-            tags.Add(new Tag("Errormessageserwr"));
-            tags.Add(new Tag("Errormessagesqwrqrqrwr"));
             lstTags.SelectionMode = SelectionMode.Extended;
             lstTags.ItemsSource = tags;
         }
@@ -89,6 +87,16 @@ namespace LogParser
         {
             if (lstTags.SelectedItem != null)
                 lstTags.SelectedItems.Remove(lstTags.SelectedItem);
+        }
+
+        private void EditTag(object sender, RoutedEventArgs e)
+        {
+            if (lstTags.SelectedItem != null)
+            {
+                TagEditor tagEditor = new TagEditor((Tag)lstTags.SelectedItem);
+                tagEditor.Owner = this;
+                tagEditor.Show();
+            }
         }
     }
 }

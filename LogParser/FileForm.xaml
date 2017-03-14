@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LogParser"
         mc:Ignorable="d"
-        Title="FilePreview" Height="300" Width="300" WindowStyle="ToolWindow" MaxWidth="300" MaxHeight="300">
+        Title="FilePreview" Height="300" Width="500" WindowStyle="ToolWindow" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -34,6 +34,7 @@
                 </Grid.ColumnDefinitions>
 
                 <ListBox Name="lstTags" Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Stretch">
+                    
                     <ListBox.ItemTemplate>
                         <DataTemplate>
                             <Grid>
@@ -46,13 +47,14 @@
                                     <ColumnDefinition Width="50"/>
                                 </Grid.ColumnDefinitions>
 
-                                <TextBlock Text="{Binding Title}"></TextBlock>
+                                <TextBlock Text="{Binding Title, Mode=OneWay}" Grid.Row="0" Grid.Column="0"></TextBlock>
                                 <Button Content="Remove" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch"></Button>
-                                <Button Content="Edit" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch"></Button>
+                                <Button Content="Edit" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" Click="EditTag"></Button>
 
                             </Grid>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
+
                 </ListBox>
                 <GridSplitter Grid.Row="0" Grid.Column="1" Width="3" HorizontalAlignment="Stretch"></GridSplitter>
                 <StackPanel Grid.Row="0" Grid.Column="2">

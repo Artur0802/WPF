@@ -1,0 +1,22 @@
+﻿<Window x:Class="LogParser.TagEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Tag - Edit" Height="120" Width="300" WindowStartupLocation="CenterOwner">
+    <Grid>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        
+        <TextBox Name="txtEditedTag" Grid.Row="0" Grid.Column="0"></TextBox>
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal"  VerticalAlignment="Center">
+            <Button Content="Ok" IsDefault="True" Width="70" Margin="70, 0, 0, 0" Click="AcceptChanges"/>
+            <Button Content="Cancel" IsCancel="True" Width="70" Margin="10, 0, 0, 0" Click="CancelChanges"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>

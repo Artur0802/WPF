@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.IO;
+using System.Collections.ObjectModel;
 
 namespace LogParser
 {
@@ -47,7 +48,7 @@ namespace LogParser
 
         private void FillTags()
         {
-            List<Tag> tags = new List<LogParser.Tag>();
+            ObservableCollection<Tag> tags = new ObservableCollection<Tag>();
             tags.Add(new Tag("Exitcode:"));
             tags.Add(new Tag("Errormessages"));
             lstTags.SelectionMode = SelectionMode.Extended;
@@ -96,6 +97,14 @@ namespace LogParser
                 TagEditor tagEditor = new TagEditor((Tag)lstTags.SelectedItem);
                 tagEditor.Owner = this;
                 tagEditor.Show();
+            }
+        }
+
+        private void RemoveTag(object sender, RoutedEventArgs e)
+        {
+            if (lstTags.SelectedItem != null)
+            {
+                lstTags.Items.Remove(lstTags.SelectedItem);
             }
         }
     }

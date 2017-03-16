@@ -38,7 +38,7 @@ namespace LogParser
         {
             InitializeComponent();
             FillTags();
-            FillFiles();
+            //FillFiles();
             FillTabs();
             FillListView();
             CreateTreeView();
@@ -49,34 +49,147 @@ namespace LogParser
             TreeViewItem item = null;
 
             item = new TreeViewItem();
-            item.Header = "North America";
+            item.Header = "HighestLvlTags 1";
 
             TreeViewItem inneritem = null;
             inneritem = new TreeViewItem();
-            inneritem.Header = "USA";
+            inneritem.Header = "HLT_1_MidLvlTags 1";
             item.Items.Add(inneritem);
+
+            TreeViewItem lowLvlItem = null;
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_1_MLT_1_LowLvlTag1";
+            inneritem.Items.Add(lowLvlItem);
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_1_MLT_1_LowLvlTag2";
+            inneritem.Items.Add(lowLvlItem);
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_1_MLT_1_LowLvlTag3";
+            inneritem.Items.Add(lowLvlItem);
+
             inneritem = new TreeViewItem();
-            inneritem.Header = "Canada";
+            inneritem.Header = "HLT_1_MidLvlTags 2";
             item.Items.Add(inneritem);
+
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_1_MLT_2_LowLvlTag1";
+            inneritem.Items.Add(lowLvlItem);
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_1_MLT_2_LowLvlTag2";
+            inneritem.Items.Add(lowLvlItem);
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_1_MLT_2_LowLvlTag3";
+            inneritem.Items.Add(lowLvlItem);
+
             inneritem = new TreeViewItem();
-            inneritem.Header = "Mexico";
+            inneritem.Header = "HLT_1_MidLvlTags 3";
             item.Items.Add(inneritem);
+
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_1_MLT_3_LowLvlTag1";
+            inneritem.Items.Add(lowLvlItem);
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_1_MLT_3_LowLvlTag2";
+            inneritem.Items.Add(lowLvlItem);
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_1_MLT_3_LowLvlTag3";
+            inneritem.Items.Add(lowLvlItem);
 
             treeView.Items.Add(item);
 
             item = new TreeViewItem();
-            item.Header = "South America";
+            item.Header = "HighestLvlTags 2";
 
             inneritem = null;
             inneritem = new TreeViewItem();
-            inneritem.Header = "Argentina";
+            inneritem.Header = "HLT_2_MidLvlTags 1";
             item.Items.Add(inneritem);
+
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_2_MLT_1_LowLvlTag1";
+            inneritem.Items.Add(lowLvlItem);
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_2_MLT_1_LowLvlTag2";
+            inneritem.Items.Add(lowLvlItem);
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_2_MLT_1_LowLvlTag3";
+            inneritem.Items.Add(lowLvlItem);
+
             inneritem = new TreeViewItem();
-            inneritem.Header = "Brasil";
+            inneritem.Header = "HLT_2_MidLvlTags 2";
             item.Items.Add(inneritem);
+
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_2_MLT_2_LowLvlTag1";
+            inneritem.Items.Add(lowLvlItem);
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_2_MLT_2_LowLvlTag2";
+            inneritem.Items.Add(lowLvlItem);
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_2_MLT_2_LowLvlTag3";
+            inneritem.Items.Add(lowLvlItem);
+
             inneritem = new TreeViewItem();
-            inneritem.Header = "Columbia";
+            inneritem.Header = "HLT_2_MidLvlTags 3";
             item.Items.Add(inneritem);
+
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_2_MLT_3_LowLvlTag1";
+            inneritem.Items.Add(lowLvlItem);
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_2_MLT_3_LowLvlTag2";
+            inneritem.Items.Add(lowLvlItem);
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_2_MLT_3_LowLvlTag3";
+            inneritem.Items.Add(lowLvlItem);
+
+            treeView.Items.Add(item);
+
+            item = new TreeViewItem();
+            item.Header = "HighestLvlTags 3";
+
+            inneritem = null;
+            inneritem = new TreeViewItem();
+            inneritem.Header = "HLT_3_MidLvlTags 1";
+            item.Items.Add(inneritem);
+
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_3_MLT_1_LowLvlTag1";
+            inneritem.Items.Add(lowLvlItem);
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_3_MLT_1_LowLvlTag2";
+            inneritem.Items.Add(lowLvlItem);
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_3_MLT_1_LowLvlTag3";
+            inneritem.Items.Add(lowLvlItem);
+
+            inneritem = new TreeViewItem();
+            inneritem.Header = "HLT_3_MidLvlTags 2";
+            item.Items.Add(inneritem);
+
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_3_MLT_2_LowLvlTag1";
+            inneritem.Items.Add(lowLvlItem);
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_3_MLT_2_LowLvlTag2";
+            inneritem.Items.Add(lowLvlItem);
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_3_MLT_2_LowLvlTag3";
+            inneritem.Items.Add(lowLvlItem);
+
+            inneritem = new TreeViewItem();
+            inneritem.Header = "HLT_3_MidLvlTags 3";
+            item.Items.Add(inneritem);
+
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_3_MLT_3_LowLvlTag1";
+            inneritem.Items.Add(lowLvlItem);
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_3_MLT_3_LowLvlTag2";
+            inneritem.Items.Add(lowLvlItem);
+            lowLvlItem = new TreeViewItem();
+            lowLvlItem.Header = "HLT_3_MLT_3_LowLvlTag3";
+            inneritem.Items.Add(lowLvlItem);
 
             treeView.Items.Add(item);
             treeView.MouseDoubleClick += AddChild;
@@ -98,13 +211,13 @@ namespace LogParser
             tbCtrl.Items.Add("XML");
         }
 
-        private void FillFiles()
+        /*private void FillFiles()
         {
             cmbbxFiles.Items.Add("Find file");
             cmbbxFiles.Items.Add("Delete file");
             cmbbxFiles.Items.Add("Edit file");
             cmbbxFiles.IsEditable = true;
-        }
+        }*/
 
         private void OpenFile(object sender, RoutedEventArgs e)
         {
@@ -115,7 +228,6 @@ namespace LogParser
             dialogbox.Filter = "Text file (*.txt)|*.txt|Pictures (.jpg, *.png, *.bmp)|*.jpg; *.png; *.bmp";
             if (dialogbox.ShowDialog() == true)
             {
-                //MessageBox.Show(dialogbox.FileName);
                 txtFilePath.Text = dialogbox.FileName;
             }
             else
@@ -187,7 +299,7 @@ namespace LogParser
             }
         }
 
-        private void ISearcher(object sender, TextCompositionEventArgs e)
+        /*void ISearcher(object sender, TextCompositionEventArgs e)
         {
             Regex rgx = new Regex('^' + e.Text + ".*", RegexOptions.IgnoreCase);
 
@@ -204,7 +316,7 @@ namespace LogParser
             }
 
             e.Handled = true;
-        }
+        }*/
 
         private void ShowTreeSelected(object sender, RoutedEventArgs e)
         {
@@ -232,6 +344,74 @@ namespace LogParser
             else
             {
                 ((TreeViewItem)sender).Items.Add("New Child");
+            }
+        }
+
+        private void ManipulateTree(object sender, RoutedEventArgs e)
+        {
+            foreach (TreeViewItem highestElement in treeView.Items)
+            {
+                TreeManipulator(highestElement);
+            }
+        }
+
+        private void TreeManipulator(TreeViewItem incoming)
+        {
+            if (incoming.Items.Count > 0)
+            {
+                if (incoming.IsExpanded == false)
+                    incoming.IsExpanded = true;
+                else
+                    incoming.IsExpanded = false;
+                foreach (TreeViewItem child in incoming.Items)
+                {
+                    TreeManipulator(child);
+                }
+            }
+        }
+
+        private void OpenEachSecond(object sender, RoutedEventArgs e)
+        {
+            foreach (TreeViewItem highestElement in treeView.Items)
+            {
+                EachSecondOpener(highestElement, treeView.Items.IndexOf(highestElement));
+            }
+            
+        }
+
+        private void EachSecondOpener(TreeViewItem incoming, int index)
+        {
+            if (incoming.Items.Count > 0 && index%2 != 0)
+            {
+                incoming.IsExpanded = true;
+                
+                foreach (TreeViewItem child in incoming.Items)
+                {
+                    EachSecondOpener(child, incoming.Items.IndexOf(child));
+                }
+            }
+        }
+
+        private void CloseEachThird(object sender, RoutedEventArgs e)
+        {
+            foreach (TreeViewItem highestElement in treeView.Items)
+            {
+                EachThirdCloser(highestElement, treeView.Items.IndexOf(highestElement)+1);
+            }
+
+        }
+
+        private void EachThirdCloser(TreeViewItem incoming, int index)
+        {
+            if (incoming.Items.Count > 0)
+            {
+                if(index % 3 == 0)
+                incoming.IsExpanded = false;
+
+                foreach (TreeViewItem child in incoming.Items)
+                {
+                    EachThirdCloser(child, incoming.Items.IndexOf(child)+1);
+                }
             }
         }
     }

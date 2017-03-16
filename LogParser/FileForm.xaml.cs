@@ -347,25 +347,42 @@ namespace LogParser
             }
         }
 
-        private void ManipulateTree(object sender, RoutedEventArgs e)
+        private void OpenTree(object sender, RoutedEventArgs e)
         {
             foreach (TreeViewItem highestElement in treeView.Items)
             {
-                TreeManipulator(highestElement);
+                TreeOpener(highestElement);
             }
         }
 
-        private void TreeManipulator(TreeViewItem incoming)
+        private void TreeOpener(TreeViewItem incoming)
         {
             if (incoming.Items.Count > 0)
             {
-                if (incoming.IsExpanded == false)
-                    incoming.IsExpanded = true;
-                else
-                    incoming.IsExpanded = false;
+                incoming.IsExpanded = true;
                 foreach (TreeViewItem child in incoming.Items)
                 {
-                    TreeManipulator(child);
+                    TreeOpener(child);
+                }
+            }
+        }
+
+        private void CloseTree(object sender, RoutedEventArgs e)
+        {
+            foreach (TreeViewItem highestElement in treeView.Items)
+            {
+                TreeCloser(highestElement);
+            }
+        }
+
+        private void TreeCloser(TreeViewItem incoming)
+        {
+            if (incoming.Items.Count > 0)
+            {
+                incoming.IsExpanded = false;
+                foreach (TreeViewItem child in incoming.Items)
+                {
+                    TreeCloser(child);
                 }
             }
         }
@@ -374,20 +391,21 @@ namespace LogParser
         {
             foreach (TreeViewItem highestElement in treeView.Items)
             {
-                EachSecondOpener(highestElement, treeView.Items.IndexOf(highestElement));
+                EachSecondOpener(highestElement, treeView.Items.IndexOf(highestElement)+1);
             }
             
         }
 
         private void EachSecondOpener(TreeViewItem incoming, int index)
         {
-            if (incoming.Items.Count > 0 && index%2 != 0)
+            if (incoming.Items.Count > 0)
             {
+                if(index%2 == 0)
                 incoming.IsExpanded = true;
                 
                 foreach (TreeViewItem child in incoming.Items)
                 {
-                    EachSecondOpener(child, incoming.Items.IndexOf(child));
+                    EachSecondOpener(child, incoming.Items.IndexOf(child)+1);
                 }
             }
         }

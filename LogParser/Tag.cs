@@ -11,6 +11,7 @@ namespace LogParser
     public class Tag : INotifyPropertyChanged
     {
         private string tagName = "";
+        private string fileType = "";
         public string Title
         {
             get
@@ -24,9 +25,26 @@ namespace LogParser
             }
         }
 
+        public string FileType
+        {
+            get
+            {
+                return this.fileType;
+            }
+            set
+            {
+                this.fileType = value;
+                OnPropertyChanged("FileType");
+            }
+        }
+
         public Tag(string tagName)
         {
             this.tagName = tagName;
+            if (tagName == "Exitcode:")
+                this.fileType = "TXT";
+            else
+                this.fileType = "XML";
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -27,6 +27,7 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
+                    <RowDefinition/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -37,7 +38,7 @@
                 <ListBox Name="lstTags" Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Stretch">
                     
                     <ListBox.ItemTemplate>
-                        <DataTemplate>
+                        <DataTemplate >
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
@@ -58,19 +59,23 @@
 
                 </ListBox>
                 <GridSplitter Grid.Row="0" Grid.Column="1" Width="3" HorizontalAlignment="Stretch"></GridSplitter>
-                <StackPanel Grid.Row="0" Grid.Column="2">
-                    <Button Content="ShowSelected" Margin="0, 0, 0, 1" Click="ShowSelected"></Button>
-                    <Button Content="SelectNext" Margin="0, 0, 0, 1" Click="SelectNext"></Button>
-                    <Button Content="SelectDeselect" Click="SelectDeselect"></Button>
-                    <Button Content="Deselect" Click="Deselect"></Button>
-                </StackPanel>
+
+                <TreeView Name="treeView" Grid.Row="0" Grid.Column="2" Grid.RowSpan="2">
+                    
+                </TreeView>
+                
+                <ComboBox Name="cmbbxFiles" Grid.Row="1" Grid.Column="0" PreviewTextInput="ISearcher">
+                   
+                </ComboBox>
 
             </Grid>
         </DockPanel>
         <GridSplitter Grid.Row="2" Grid.Column="0" Height="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></GridSplitter>
         <DockPanel Grid.Row="3" Grid.Column="0">
 
-            <DataGrid Margin="1,1,1,1"></DataGrid>
+            <TabControl Name="tbCtrl">
+                
+            </TabControl>
             
         </DockPanel>
 

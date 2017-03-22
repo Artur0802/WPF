@@ -39,11 +39,17 @@ namespace LogParser
             InitializeComponent();
             FillTags();
             //FillFiles();
-            FillTabs();
+            //FillTabs();
             FillListView();
             CreateTreeView();
+
+            downGrid.DataContext = new TagDependencyProperty();
         }
 
+        private void Show(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show(((TagDependencyProperty)downGrid.DataContext).Title);
+        }
         private void CreateTreeView()
         {
             TreeViewItem item = null;
@@ -205,11 +211,11 @@ namespace LogParser
             
         }
 
-        private void FillTabs()
+        /*private void FillTabs()
         {
             tbCtrl.Items.Add("TXT");
             tbCtrl.Items.Add("XML");
-        }
+        }*/
 
         /*private void FillFiles()
         {
@@ -432,5 +438,36 @@ namespace LogParser
                 }
             }
         }
+
+        public void ShowDataTemplateElement(object sender,RoutedEventArgs e)
+        {
+            foreach (var item in lstTags.Items)
+            {
+                var itemContainer = lstTags.ItemContainerGenerator.ContainerFromItem(item);
+                foreach (Control child in GetChildren(itemContainer))
+                {
+                    if(child is TextBox)
+                    MessageBox.Show(child.Name);
+                }
+            }
+        }
+
+        private List<Control> GetChildren(DependencyObject parent)
+        {
+            List<Control> rezult = new List<Control>();
+            int countOfChildren = VisualTreeHelper.GetChildrenCount(parent);
+            for (int i = 0; i < countOfChildren; i++)
+            {
+                var child = VisualTreeHelper.GetChild(parent, i);
+                if (child is Control)
+                    rezult.Add((Control)child);
+                rezult.AddRange(GetChildren(child));
+            }
+            return rezult;
+        }
+
+
+
+        
     }
 }

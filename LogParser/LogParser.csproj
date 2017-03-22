@@ -60,6 +60,7 @@
       <DependentUpon>FileForm.xaml</DependentUpon>
     </Compile>
     <Compile Include="Tag.cs" />
+    <Compile Include="TagDependencyProperty.cs" />
     <Compile Include="TagEditor.xaml.cs">
       <DependentUpon>TagEditor.xaml</DependentUpon>
     </Compile>

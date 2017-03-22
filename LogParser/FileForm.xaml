@@ -49,7 +49,7 @@
                                     <ColumnDefinition Width="50"/>
                                 </Grid.ColumnDefinitions>
 
-                                <TextBlock  Name="txtBlock" Text="{Binding Title, Mode=OneWay}" Grid.Row="0" Grid.Column="0"></TextBlock>
+                                <TextBox  Name="txtBlock" Text="{Binding Title, Mode=OneWay}" Grid.Row="0" Grid.Column="0"></TextBox>
                                 <Button Content="Remove" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Stretch" Click="RemoveTag"></Button>
                                 <Button Content="Edit" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Stretch" Click="EditTag"></Button>
 
@@ -78,12 +78,30 @@
             </Grid>
         </DockPanel>
         <GridSplitter Grid.Row="2" Grid.Column="0" Height="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"></GridSplitter>
-        <DockPanel Grid.Row="3" Grid.Column="0">
+        <DockPanel Name="depPropPanel" Grid.Row="3" Grid.Column="0">
 
-            <TabControl Name="tbCtrl">
+            <Grid Name="downGrid">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
                 
-            </TabControl>
-            
+                <Label Content="TagName" Grid.Row="0" Grid.Column="0"></Label>
+                <Label Content="FileType" Grid.Row="1" Grid.Column="0"></Label>
+
+                <TextBox Name="firstTxtBox" Grid.Row="0" Grid.Column="1" Text="{Binding TitleProperty, Mode=TwoWay}"></TextBox>
+                <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding FileTypeProperty, Mode=TwoWay}"></TextBox>
+
+                <Button Grid.Row="2" Grid.Column="0" Content="Show" Click="Show"></Button>
+                <Button Grid.Row="2" Grid.Column="1" Content="ShowDataTemplateElement" Click="ShowDataTemplateElement"></Button>
+            </Grid>
+
+
         </DockPanel>
 
     </Grid>
